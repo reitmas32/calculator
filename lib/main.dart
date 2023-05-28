@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -13,7 +14,10 @@ bool matchOnList({dynamic value, required List<dynamic> list}) {
 
 void main() {
   runApp(
-    const MyApp(),
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
   );
 }
 
